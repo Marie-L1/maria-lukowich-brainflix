@@ -18,3 +18,84 @@
         @content;
     }
 };
+
+
+@mixin page-header {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: "Avenir Next Demi";
+
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+    @include desktop {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+}
+
+@mixin section-header {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: "Avenir Next Demi";
+
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+    @include desktop {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+}
+
+@mixin subheader {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: "Avenir Next Demi";
+
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+    @include desktop {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+}
+
+@mixin body {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: "Avenir Next Demi";
+
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+    @include desktop {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+}
+
+@mixin labels-btns {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 600;
+    font-family: "Avenir Next Demi";
+
+    @include tablet {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+    @include desktop {
+        font-size: 3.75rem;
+        line-height: 4.25rem;
+    }
+}
