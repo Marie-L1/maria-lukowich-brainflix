@@ -52,11 +52,8 @@ function App() {
           </ul>
 
         <section class="next-videos">
-          
+
         </section>
-
-
-
       </main>
     </body>
     <footer>
