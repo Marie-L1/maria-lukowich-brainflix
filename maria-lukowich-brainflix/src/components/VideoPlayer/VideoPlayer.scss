@@ -1,0 +1,19 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+
+.video-player{
+
+    &__video{
+        width: 100%;
+        height: 20vh;
+    }
+    &__title{
+        @include page-header;
+
+    }
+    &__info{
+        @include body;
+
+    }
+}
