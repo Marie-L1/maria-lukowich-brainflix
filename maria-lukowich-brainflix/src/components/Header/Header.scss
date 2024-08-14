@@ -1,6 +1,7 @@
-@use '../../styles/partials/mixins' as *;
-@use '../../styles/partials/variables' as *;
-@use '../../styles/partials/global' as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+
 
 header{
     @include flex-column;
@@ -14,38 +15,88 @@ header{
         max-height: 1.5625rem;
         max-width: 7.5rem;
         padding: 1.25rem;
+        margin: -1.25rem;
+    }
+
+    @include tablet{
+
+    }
+    @include desktop{
+
     }
 }
 
 .nav-input{
     @include flex-row;
+    padding: 20px;
+    gap: .9375rem;
 
-    // &__search-bar{
+    &__search-bar{
+        position: relative;
+    }
 
-    // }
-    // &__search-img{
+    &__search-box{
+        background-color: $alabaster;
+        border: solid .125rem $mercury;
+        width: 75vw;
+        max-height: 2.1875rem;
+        padding: .9375rem;
+        border-radius: 4px;
+        position: relative;
 
-
-    // }
-    // &__search-box{
-
-    // }
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("../../assets/Icons/search.svg") no-repeat center center;
+            background-size: 1.875rem;
+            right: .625rem;
+            top: 25%;
+            height: 2rem;
+            width: 2rem;
+        }
+    }
     &__profile-img{
         border-radius: 50%;
-        height: 2.25rem;
-        width: 2.25rem;
+        height: 3.25rem;
+        width: 3.25rem;
+    }
+    @include tablet{
+
+    }
+    @include desktop{
+        
     }
 }
 
 .upload{
+    @include flex-center-items;
+
     &__btn{
         @include flex-center-content;
         flex-wrap: wrap;
         background-color: $primary-blue;
         color: $white;
         max-height: 2.5rem;
-        width: 90vw;
+        width: 95vw;
         padding: 2rem;
         border-radius: 4px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("../../assets/Icons/upload.svg") no-repeat center;
+            background-size: 1.875rem;
+            left: .625rem;
+            top: 25%;
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+    @include tablet{
+
+    }
+    @include desktop{
+        
     }
 }

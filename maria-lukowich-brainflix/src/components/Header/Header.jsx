@@ -10,7 +10,6 @@ function Header() {
             </section>
             <section className="nav-input">
               <div className="nav-input__search-bar">
-                <img className="nav-input__search-img" src=""></img>
                 <input className="nav-input__search-box" name="search-input" placeholder="Search"></input>
               </div>
               <img className="nav-input__profile-img" src={profile}></img>
