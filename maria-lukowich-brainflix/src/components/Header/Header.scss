@@ -1,43 +1,51 @@
-@use '../../styles/partials/mixins';
-@use '../../styles/partials/global';
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/global' as *;
+
+header{
+    @include flex-column;
+    @include flex-center-items;
+}
 
 .nav-logo{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+    @include flex-row;
 
     &__img{
         max-height: 1.5625rem;
-        max-width: 7.5rem; 
-
-
-    }
-    &__title{
-        // @include page-header;
+        max-width: 7.5rem;
+        padding: 1.25rem;
     }
 }
 
 .nav-input{
+    @include flex-row;
 
-    &__search-bar{
+    // &__search-bar{
 
-    }
-    &__search-img{
+    // }
+    // &__search-img{
 
-    }
-    &__search-box{
 
-    }
+    // }
+    // &__search-box{
+
+    // }
     &__profile-img{
-
+        border-radius: 50%;
+        height: 2.25rem;
+        width: 2.25rem;
     }
 }
 
 .upload{
-
     &__btn{
-
+        @include flex-center-content;
+        flex-wrap: wrap;
+        background-color: $primary-blue;
+        color: $white;
+        max-height: 2.5rem;
+        width: 90vw;
+        padding: 2rem;
+        border-radius: 4px;
     }
 }
