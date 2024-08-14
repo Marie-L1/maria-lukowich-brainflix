@@ -1,0 +1,43 @@
+@use '../../styles/partials/mixins';
+@use '../../styles/partials/global';
+
+.nav-logo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    &__img{
+        max-height: 1.5625rem;
+        max-width: 7.5rem; 
+
+
+    }
+    &__title{
+        // @include page-header;
+    }
+}
+
+.nav-input{
+
+    &__search-bar{
+
+    }
+    &__search-img{
+
+    }
+    &__search-box{
+
+    }
+    &__profile-img{
+
+    }
+}
+
+.upload{
+
+    &__btn{
+
+    }
+}

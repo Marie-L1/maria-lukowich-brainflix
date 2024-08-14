@@ -1,29 +1,11 @@
 import './App.css'
+import Header from './components/Header/Header'
 
 function App() {
 
   return (
     <>
-    <body>
-      <header>
-          <nav class="nav">
-            <section class="nav-logo">
-              <img class="nav-logo__img" src="../../assets/logo.BrainFlix-logo.svg" alt="BrainFlix play button"></img>
-              <h2 class="nav-logo__title">BrainFlix</h2>
-            </section>
-            <section class="nav-input">
-              <div class="nav-input__search-bar">
-                <img class="nav-input__search-img" src=""></img>
-                <input class="nav-input__search-box" name="search-input" place-holder="Search"></input>
-              </div>
-              <img class="nav-input__profile-img" src="../../assests/Mohan-muruge.jpg"></img>
-            </section>
-            <section class="upload">
-              <button class="upload-btn">UPLOAD</button>
-            </section>
-          </nav>
-      </header>
-      <main>
+      <Header />
         {/* this section will be created by JavaScript */}
         <section class="video-player">
           <video></video>
@@ -64,9 +46,7 @@ function App() {
             <h3 class="next-videos__creator"></h3>
           </li>
         </ul>
-        
-      </main>
-    </body>
+      
     <footer>
 
     </footer>
