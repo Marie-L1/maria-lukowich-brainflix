@@ -6,6 +6,12 @@
 header{
     @include flex-column;
     @include flex-center-items;
+    flex-wrap: nowrap;
+
+    @include tablet{
+        @include flex-row;
+        justify-content: space-around;
+    }
 }
 
 .nav-logo{
@@ -61,6 +67,14 @@ header{
         width: 3.25rem;
     }
     @include tablet{
+        &__search-box{
+            background-color: $alabaster;
+            border: solid .125rem $mercury;
+            width: 20vw;
+            max-height: 2.1875rem;
+            padding: .9375rem;
+ 
+        }
 
     }
     @include desktop{
@@ -94,6 +108,26 @@ header{
         }
     }
     @include tablet{
+        &__btn{
+            @include flex-center-content;
+            flex-wrap: wrap;
+            background-color: $primary-blue;
+            color: $white;
+            max-height: 2.5rem;
+            width: 20vw;
+            padding: 1.5rem;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background: url("../../assets/Icons/upload.svg") no-repeat center;
+                background-size: 1.5rem;
+                left: .625rem;
+                top: 20%;
+                height: 2rem;
+                width: 2rem;
+            }
+        }
 
     }
     @include desktop{
