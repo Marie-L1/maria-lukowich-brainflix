@@ -43,7 +43,7 @@ header{
     &__search-box{
         background-color: $alabaster;
         border: solid .125rem $mercury;
-        width: 75vw;
+        width: 66vw;
         max-height: 2.1875rem;
         padding: .9375rem;
         border-radius: 4px;
@@ -64,6 +64,7 @@ header{
         border-radius: 50%;
         height: 3.25rem;
         width: 3.25rem;
+        // aspect-ratio: 16/19;
     }
     @include tablet{
         &__search-box{
@@ -90,10 +91,12 @@ header{
         background-color: $primary-blue;
         color: $white;
         max-height: 2.5rem;
-        width: 95vw;
+        width: 90vw;
         padding: 2rem;
         border-radius: 4px;
         position: relative;
+        border: none;
+        margin-bottom: 1.25rem;
 
         &::before {
             content: "";
