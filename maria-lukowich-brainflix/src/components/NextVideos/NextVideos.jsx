@@ -20,7 +20,6 @@ function NextVideos({ videos, nextVideoClick}){
                 </div>
           </li>
         ))}
-
         </ul>
     );
 }

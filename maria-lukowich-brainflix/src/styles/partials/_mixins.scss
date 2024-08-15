@@ -96,6 +96,12 @@
     }
 }
 
+// video info
+@mixin video-info{
+    @include body;
+    color: $sliver;
+}
+
 
 // flex mixins
 @mixin flex-row{

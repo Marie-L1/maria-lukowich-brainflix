@@ -1,6 +1,6 @@
 import './App.css'
 import { useState } from 'react';
-import videoData from './assets/Data/video-details.json'
+import videoData from './Data/video-details.json'
 import Header from './components/Header/Header';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import VideoDecription from './components/VideoDescription/VideoDescription';
@@ -11,7 +11,7 @@ function App() {
 
   // useState to identify videos by their id
   const [videoPlayer, setVideoPlayer] = useState(videoData.find(
-    video => video.id === "84e96018-4022-434e-80bf-000ce4cd12b8"
+    video => video.id === "84e96018-4022-434e-80bf-000ce4cd12b8"  // default will be the first video object in the array
   ))
 
   // function that handles video selection
