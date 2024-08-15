@@ -2,7 +2,7 @@ import './NextVideos.scss';
 
 function NextVideos({ videos, nextVideoClick}){
     return(
-        <>
+        <aside>
         <h3 className="list-title">NEXT VIDEOS</h3>
          <ul className="next-videos">
             {videos.map(video => (
@@ -23,7 +23,7 @@ function NextVideos({ videos, nextVideoClick}){
           </li>
         ))}
         </ul>
-    </>
+    </aside>
     );
 
 }
