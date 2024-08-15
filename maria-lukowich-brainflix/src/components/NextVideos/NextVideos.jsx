@@ -2,6 +2,8 @@ import './NextVideos.scss';
 
 function NextVideos({ videos, nextVideoClick}){
     return(
+        <>
+        <h3 className="list-title">NEXT VIDEOS</h3>
          <ul className="next-videos">
             {videos.map(video => (
                 <li
@@ -14,14 +16,16 @@ function NextVideos({ videos, nextVideoClick}){
                 src={video.image}
                 alt={video.title}
                 />
-                <div>
+                <div className="next-videos__text">
                     <h3 className="next-videos__title">{video.title}</h3>
                     <h3 className="next-videos__creator">{video.channel}</h3>
                 </div>
           </li>
         ))}
         </ul>
+    </>
     );
+
 }
 
 export default NextVideos;

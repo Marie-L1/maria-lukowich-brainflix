@@ -1,2 +1,42 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.list-title{
+    @include videoList;
+    margin-left: 20px;
+}
+
+.next-videos{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+    &__item{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.875rem;
+        margin: 0 1.25rem 0 -1.25rem;
+    }
+    &__img{
+      border-radius: .25rem;  
+      width: 35vw;
+      max-height: 10vh;
+
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
+    &__title{
+        @include nextVideo-title;
+        
+
+    }
+    &__creator{
+        @include nextVideo-creator;
+    }
+}
