@@ -33,7 +33,7 @@ function App() {
       views={videoPlayer.views}
       likes={videoPlayer.likes}
       />
-      <VideoDecription />
+      <VideoDecription description={videoPlayer.description} />
       <Comments />
       <NextVideos videos={videoData.filter(video => video.id !== videoPlayer.id)}
         nextVideoClick={handleNextVideoClick} />
