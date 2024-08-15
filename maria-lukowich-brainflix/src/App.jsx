@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import { useState } from 'react';
 import videoData from './Data/video-details.json'
 import Header from './components/Header/Header';
@@ -37,7 +37,7 @@ function App() {
       <VideoDescription description={videoPlayer.description} />
 
       <Comments comments={videoPlayer.comments} />
-      <CommentsList selectedVideo={selectedVideo} />
+      <CommentsList comments={videoPlayer.comments} />
 
 
       <NextVideos videos={videoData.filter(video => video.id !== videoPlayer.id)}

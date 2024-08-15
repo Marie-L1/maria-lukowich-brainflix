@@ -1,18 +1,6 @@
 import "./Comments.scss";
 
-
-// formating the timestamps 
-const formatTimestamp = (timestamp) => {
-  const date = new Date(timestamp);
-  return new Intl.DateTimeFormat('en-US', {
-    month: '2-digit',
-    day: '2-digit',
-    year: 'numeric'
-  }).format(date);
-}
-
-
-function Comments({comments}) {
+function Comments() {
   return (
     <>
       <section className="comments">
