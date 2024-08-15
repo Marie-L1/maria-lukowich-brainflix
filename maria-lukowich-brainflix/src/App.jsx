@@ -3,7 +3,7 @@ import { useState } from 'react';
 import videoData from './Data/video-details.json'
 import Header from './components/Header/Header';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
-import VideoDecription from './components/VideoDescription/VideoDescription';
+import VideoDescription from './components/VideoDescription/VideoDescription';
 import Comments from './components/Comments/Comments';
 import NextVideos from './components/NextVideos/NextVideos';
 
@@ -33,8 +33,8 @@ function App() {
       views={videoPlayer.views}
       likes={videoPlayer.likes}
       />
-      <VideoDecription description={videoPlayer.description} />
-      <Comments />
+      <VideoDescription description={videoPlayer.description} />
+      <Comments comments={videoPlayer.comments} />
       <NextVideos videos={videoData.filter(video => video.id !== videoPlayer.id)}
         nextVideoClick={handleNextVideoClick} />
     </>

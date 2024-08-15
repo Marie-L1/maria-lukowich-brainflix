@@ -1,6 +1,6 @@
 import "./VideoDescription";
 
-function VideoDecription({description}) {
+function VideoDescription({description}) {
   return (
     <>
       <section className="video-description">
@@ -10,4 +10,4 @@ function VideoDecription({description}) {
   );
 }
 
-export default VideoDecription;
+export default VideoDescription;
