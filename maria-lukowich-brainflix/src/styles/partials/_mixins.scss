@@ -96,10 +96,26 @@
     }
 }
 
-// video info
+// specific fonts
 @mixin video-info{
     @include body;
     color: $sliver;
+}
+
+@mixin videoList{
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    font-weight: 600;
+    font-family: "Avenir Next Demi";
+    color: $sliver;
+}
+
+@mixin nextVideo-title{
+    @include subheader;
+}
+
+@mixin nextVideo-creator{
+    @include body;
 }
 
 
