@@ -1,2 +1,12 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.video-description{
+
+    &__text{
+        @include body;
+        color: $mercury;
+        display: flex;
+        flex-direction: center;
+    }
+}
