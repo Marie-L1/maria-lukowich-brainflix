@@ -14,13 +14,29 @@ function App() {
     video => video.id === "84e96018-4022-434e-80bf-000ce4cd12b8"
   ))
 
+  // function that handles video selection
+  const handleNextVideoClick = (videoId) => {
+    const selectedVideo = videoData.find(video => video.id === videoId);
+    setVideoPlayer(selectedVideo);
+  }
+
   return (
     <>
       <Header />
-      <VideoPlayer video={videoPlayer.video} poster={videoPlayer.image} duration={videoPlayer.duration} />
+      <VideoPlayer 
+      video={videoPlayer.video}
+      poster={videoPlayer.image} 
+      duration={videoPlayer.duration}
+      title={videoPlayer.title}
+      channel={videoPlayer.channel}
+      timestamp={videoPlayer.timestamp}
+      views={videoPlayer.views}
+      likes={videoPlayer.likes}
+      />
       <VideoDecription />
       <Comments />
-      <NextVideos />
+      <NextVideos videos={videoData.filter(video => video.id !== videoPlayer.id)}
+        nextVideoClick={handleNextVideoClick} />
     </>
   )
 }
