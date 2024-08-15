@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import VideoDescription from './components/VideoDescription/VideoDescription';
 import Comments from './components/Comments/Comments';
+import CommentsList from './components/CommentsList/CommentsList';
 import NextVideos from './components/NextVideos/NextVideos';
 
 function App() {
@@ -34,7 +35,11 @@ function App() {
       likes={videoPlayer.likes}
       />
       <VideoDescription description={videoPlayer.description} />
+
       <Comments comments={videoPlayer.comments} />
+      <CommentsList selectedVideo={selectedVideo} />
+
+
       <NextVideos videos={videoData.filter(video => video.id !== videoPlayer.id)}
         nextVideoClick={handleNextVideoClick} />
     </>

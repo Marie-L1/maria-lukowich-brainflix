@@ -24,14 +24,6 @@ function Comments({comments}) {
           <button className="comments__add-button">COMMENT</button>
         </form>
       </section>
-      <ul className="comments-list">
-        <li className="comments-list__item">
-          <img className="comments-list__profile-img" alt="blank profile image"></img>
-          <h3 className="comments-list__name">{comments.comments.name}</h3>
-          <p className="comments-list__content">{comments.comment}</p>
-          <h3 className="comment-list__date">{formatTimestamp(comments.timestamp)}</h3>
-        </li>
-      </ul>
     </>
   );
 }
