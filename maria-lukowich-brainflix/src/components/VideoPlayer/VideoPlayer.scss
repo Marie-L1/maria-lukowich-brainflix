@@ -85,6 +85,7 @@
         @include video-info;
 
     }
+
     @include tablet {
         // Tablet-specific styles
         &__video{
@@ -143,6 +144,54 @@
     
       @include desktop {
         // Desktop-specific styles
+        &__video{
+            height: 75vh;
+        }
+        &__title{
+            margin: 1.25rem 1.25rem 1.25rem 5.5rem;
+        }
+        &__info{
+            justify-content: space-around;
+            margin: 0 7rem 1.25rem -8.5rem;
+            
+            &::after { 
+                left: 50%;
+                width: 70%;
+            }
+            }
+        &__info-wrapper{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+        &__info-left{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+        }
+        &__channel{
+            font-weight: 600;
+    
+        }
+        &__timestamp{
+            @include video-info;
+    
+        }
+        &__views-img, &__likes-img{
+          height: 1.25rem;
+          width: 1.25rem;
+    
+        }
+        &__views {
+            @include video-info;
+    
+        }
+        &__likes{
+            @include video-info;
+    
+        }
       }
+    
+
     
 }
