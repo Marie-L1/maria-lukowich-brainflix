@@ -11,6 +11,24 @@
         justify-content: space-around;
         align-items: flex-start;
         @include body;
+        position: relative;
+        
+
+        &::before, &::after { 
+            content: "";
+            position: absolute;
+            left: 48%;
+            width: 100%;
+            height: .0625rem;
+            background-color: $mercury;
+            transform: translateX(-50%);
+        }
+            &::before {
+                top: 0;
+            }
+            &::after {
+                bottom: 0;
+            }
 
     }
     &__profile-img{

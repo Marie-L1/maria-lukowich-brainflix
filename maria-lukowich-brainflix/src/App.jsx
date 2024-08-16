@@ -4,7 +4,7 @@ import videoData from './Data/video-details.json'
 import Header from './components/Header/Header';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import VideoDescription from './components/VideoDescription/VideoDescription';
-import Comments from './components/Comments/Comments';
+import AddComments from './components/Comments/AddComments';
 import CommentsList from './components/CommentsList/CommentsList';
 import NextVideos from './components/NextVideos/NextVideos';
 
@@ -36,7 +36,7 @@ function App() {
       />
       <VideoDescription description={videoPlayer.description} />
 
-      <Comments comments={videoPlayer.comments} />
+      <AddComments comments={videoPlayer.comments} />
       <CommentsList comments={videoPlayer.comments} />
 
 

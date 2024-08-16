@@ -26,9 +26,28 @@
     &__textarea{
         padding: .625rem;
         background-color: $alabaster;
+        color: $primary-black;
         width: 70vw;
         height: 14vh;
         margin-right: 2.5rem;
+        border: .0625rem solid $mercury;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: background-color  0.3s ease;
+
+        &::placeholder{
+            @include body;
+        }
+        &:not(:placeholder-shown) {
+            @include body;
+            color: $primary-black;
+        }
+        &:focus {
+            border-color: $primary-black;
+            @include body;
+            outline: none; 
+        }
+
 
     }
     &__main-img{

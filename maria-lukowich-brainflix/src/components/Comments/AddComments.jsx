@@ -1,7 +1,7 @@
-import "./Comments.scss";
+import "./AddComments.scss";
 import mohan from "../../assets/Images/Mohan-muruge.jpg";
 
-function Comments() {
+function AddComments() {
   return (
     <>
       <section className="comments">
@@ -19,4 +19,4 @@ function Comments() {
   );
 }
 
-export default Comments;
+export default AddComments;
