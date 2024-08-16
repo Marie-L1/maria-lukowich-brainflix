@@ -30,6 +30,10 @@
             }
 
     }
+    &__info-wrapper{
+        display: flex;
+        
+    }
     &__info{
         @include body;
         color: $primary-black;
@@ -41,7 +45,7 @@
 
         &--right{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             flex-wrap: nowrap;
 
@@ -51,6 +55,14 @@
             flex-direction: column;
             justify-content: space-around;
 
+        }
+        &__views-wrapper{
+            display: flex;
+            flex-direction: row;
+        }
+        &__info--likes{
+            display: flex;
+            flex-direction: row;
         }
 
     }
