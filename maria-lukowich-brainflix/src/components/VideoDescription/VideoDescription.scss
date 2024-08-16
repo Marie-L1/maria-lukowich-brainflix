@@ -8,7 +8,14 @@
         display: flex;
         flex-direction: center;
         margin: 0 20px;
-        flex-wrap: wrap;
-        
+        flex-wrap: wrap; 
     }
+    @include tablet {
+        // Tablet-specific styles
+      }
+    
+      @include desktop {
+        // Desktop-specific styles
+      }
+    
 }

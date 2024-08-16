@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "date-fns": "^3.6.0",
-    "react-router-dom": "^6.26.1",
-    "sass": "^1.77.8"
-  }
-}

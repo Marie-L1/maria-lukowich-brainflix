@@ -4,6 +4,15 @@
 .list-title{
     @include videoList;
     margin-left: 20px;
+
+    @include tablet {
+        // Tablet-specific styles
+      }
+    
+      @include desktop {
+        // Desktop-specific styles
+      }
+    
 }
 
 .next-videos{
@@ -40,4 +49,13 @@
     &__creator{
         @include nextVideo-creator;
     }
+
+    @include tablet {
+        // Tablet-specific styles
+      }
+    
+      @include desktop {
+        // Desktop-specific styles
+      }
+    
 }
