@@ -50,17 +50,34 @@ header{
         position: relative;
         transition: background-color  0.3s ease;
 
+        // placeholder styling
         &::placeholder{
             @include body;
         }
+        // when the input has text
         &:not(:placeholder-shown) {
             @include body;
             color: $primary-black;
         }
+        // focus state styling
         &:focus {
             border-color: $primary-black;
             @include body;
             outline: none; 
+        }
+        // adding the magnifying glass icon- come back to
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("../../assets/Icons/search.svg") no-repeat center;
+            background-size: 1.5rem;  // Adjust the icon size as needed
+            left: .625rem;  // Position the icon
+            top: 50%;  // Center the icon vertically
+            transform: translateY(-50%);  // Adjust for perfect vertical alignment
+            height: 1.5rem;  // Match the icon size
+            width: 1.5rem;  // Match the icon size
+            pointer-events: none;  // Prevent the icon from interfering with input interactions
+            z-index: 2;
         }
     }
     &__profile-img{
