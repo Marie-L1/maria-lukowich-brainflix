@@ -9,13 +9,16 @@
         flex-direction: center;
         margin: 0 20px;
         flex-wrap: wrap; 
+
+        @include tablet {
+            // Tablet-specific styles
+              margin: 0 50px;
+          }
+        
+          @include desktop {
+            // Desktop-specific styles
+              margin: 0 50px;
+          }
     }
-    @include tablet {
-        // Tablet-specific styles
-      }
-    
-      @include desktop {
-        // Desktop-specific styles
-      }
     
 }

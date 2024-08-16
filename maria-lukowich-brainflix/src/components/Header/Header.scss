@@ -4,12 +4,38 @@
 
 header{
     @include flex-column;
-    @include flex-center-items;
+    align-items: center;
     flex-wrap: nowrap;
 
     @include tablet{
         @include flex-row;
         justify-content: space-around;
+
+        .nav-input__search-bar {
+            order: 1; // First element
+          }
+      
+          .upload__btn {
+            order: 2; // Second element
+          }
+      
+          .nav-input__profile-img {
+            order: 3; // Third element
+          }
+    }
+    @include desktop{
+        // placeholder for styles
+        .nav-input__search-bar {
+            order: 1; // First element
+          }
+      
+          .upload__btn {
+            order: 2; // Second element
+          }
+      
+          .nav-input__profile-img {
+            order: 3; // Third element
+          }
     }
 }
 
@@ -24,10 +50,18 @@ header{
     }
 
     @include tablet{
-
+        // placeholder for styles
+        &__img{
+            padding: 2rem;
+            margin: -.625rem 0 -1.25rem 0;
+        }
     }
     @include desktop{
-
+        // placeholder for styles
+        &__img{
+            padding: 2rem;
+            margin: -.625rem 0 -1.25rem 0;
+        }
     }
 }
 
@@ -63,7 +97,7 @@ header{
         &:focus {
             border-color: $primary-black;
             @include body;
-            outline: none; 
+            // outline: none; 
         }
         // adding the magnifying glass icon- come back to
         &::before {
@@ -88,17 +122,16 @@ header{
     }
     @include tablet{
         &__search-box{
-            background-color: $alabaster;
-            border: solid .125rem $mercury;
-            width: 20vw;
-            max-height: 2.1875rem;
-            padding: .9375rem;
- 
+            width: 30vw;
         }
 
     }
     @include desktop{
-        
+        // placeholder for styles
+        &__search-box{
+            width: 30vw;
+        }
+
     }
 }
 
@@ -131,28 +164,18 @@ header{
     }
     @include tablet{
         &__btn{
-            @include flex-center-content;
-            flex-wrap: wrap;
-            background-color: $primary-blue;
-            color: $white;
-            max-height: 2.5rem;
             width: 17vw;
             padding: 1.5rem;
 
-            &::before {
-                content: "";
-                position: absolute;
-                background: url("../../assets/Icons/upload.svg") no-repeat center;
-                background-size: 1.5rem;
-                left: .625rem;
-                top: 20%;
-                height: 2rem;
-                width: 2rem;
-            }
         }
 
     }
     @include desktop{
-        
+        // placeholder
+        &__btn{
+            width: 17vw;
+            padding: 1.5rem;
+
+        }
     }
 }
