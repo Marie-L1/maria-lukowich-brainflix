@@ -5,8 +5,9 @@
 
     &__text{
         @include body;
-        color: $mercury;
         display: flex;
         flex-direction: center;
+        margin: 0 20px;
+        flex-wrap: wrap;
     }
 }

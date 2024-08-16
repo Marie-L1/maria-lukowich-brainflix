@@ -1,4 +1,4 @@
-import "./VideoDescription";
+import "./VideoDescription.scss";
 
 function VideoDescription({description}) {
   return (
