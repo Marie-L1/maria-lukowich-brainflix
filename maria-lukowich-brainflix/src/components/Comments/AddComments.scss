@@ -47,8 +47,6 @@
             @include body;
             outline: none; 
         }
-
-
     }
     &__main-img{
         height: 3.25rem;
@@ -76,8 +74,6 @@
             margin-left: 2.1875rem;
         }
         &__wrapper{
-            display: flex;
-            flex-direction: column;
             flex-wrap: nowrap;
         }
         &__textarea-comment{
@@ -104,30 +100,31 @@
       @include desktop {
         // Desktop-specific styles
         &__length{
-            margin-left: 2.1875rem;
+            margin-left: 6rem;
         }
         &__wrapper{
-            display: flex;
-            flex-direction: column;
             flex-wrap: nowrap;
+            margin-left: 150px;
         }
         &__textarea-comment{
             display: flex;
             flex-direction: row;
         }
         &__textarea{
-            width: 66vw;
+            width: 30vw;
             height: 2.1875rem;
             margin-right: 2.5rem;
         }
         &__main-img{
-            margin-left: 1.5625rem;
-            margin-bottom: -4.6875rem;
+            margin-left: 6rem;
+            margin-bottom: -4.2rem;
+            height: 2.25rem;
+            width: 2.25rem;
         }
         &__add-btn{
             margin-top: -0.1rem;
             margin-left: -1.5625rem;
-            width: 17vw;
+            width: 12vw;
             height: 2.1875rem
         }
     }
