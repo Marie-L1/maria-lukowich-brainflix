@@ -10,8 +10,10 @@ function AddComments() {
           <img className="comments__main-img" src={mohan} alt="mohan-muruge"></img>
           <div className="comments__wrapper">
             <label class="comments__join-convo">JOIN THE CONVERSATION</label>
-            <textarea className="comments__textarea" placeholder="Add a new comment"></textarea>
-            <button className="comments__add-btn">COMMENT</button>
+            <div className="comments__textarea-comment">
+              <textarea className="comments__textarea" placeholder="Add a new comment"></textarea>
+              <button className="comments__add-btn">COMMENT</button>
+            </div>
           </div>
         </form>
       </section>

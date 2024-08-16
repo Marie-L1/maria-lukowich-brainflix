@@ -42,9 +42,7 @@
         
     }
     &__title{
-        @include nextVideo-title;
-        
-
+        @include subheader;
     }
     &__creator{
         @include nextVideo-creator;
@@ -52,6 +50,10 @@
 
     @include tablet {
         // Tablet-specific styles
+        &__title{
+          display: flex;
+          flex-wrap: wrap;
+      }
       }
     
       @include desktop {

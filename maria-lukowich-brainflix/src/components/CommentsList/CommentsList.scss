@@ -44,9 +44,10 @@
         flex-direction: column;
         justify-content: flex-start;
     }
-    // &__name{
+    &__name{
+        @include subheader;
 
-    // }
+    }
     &__content{
         margin-top: -0.3125rem;
 
@@ -62,6 +63,23 @@
     }
 
     @include tablet{
+        &__item{
+        
+            &::before, &::after { 
+                left: 47%;
+                width: 96%;
+            }
+    
+        }
+        &__profile-img{
+            margin: .9375rem -1.25rem 0 -0.625rem;
+        }
+        &__text-wrapper{
+            margin-left: 2.5rem;
+        }
+        &__date{
+            margin-right: 3.125rem;
+        }
 
     }
     @include desktop{

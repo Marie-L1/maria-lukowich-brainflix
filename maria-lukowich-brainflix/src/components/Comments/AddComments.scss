@@ -72,10 +72,64 @@
     }
     @include tablet {
         // Tablet-specific styles
+        &__length{
+            margin-left: 2.1875rem;
+        }
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        &__textarea-comment{
+            display: flex;
+            flex-direction: row;
+        }
+        &__textarea{
+            width: 66vw;
+            height: 2.1875rem;
+            margin-right: 2.5rem;
+        }
+        &__main-img{
+            margin-left: 1.5625rem;
+            margin-bottom: -4.6875rem;
+        }
+        &__add-btn{
+            margin-top: -0.1rem;
+            margin-left: -1.5625rem;
+            width: 17vw;
+            height: 2.1875rem
+        }
       }
     
       @include desktop {
         // Desktop-specific styles
-      }
-    
+        &__length{
+            margin-left: 2.1875rem;
+        }
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        &__textarea-comment{
+            display: flex;
+            flex-direction: row;
+        }
+        &__textarea{
+            width: 66vw;
+            height: 2.1875rem;
+            margin-right: 2.5rem;
+        }
+        &__main-img{
+            margin-left: 1.5625rem;
+            margin-bottom: -4.6875rem;
+        }
+        &__add-btn{
+            margin-top: -0.1rem;
+            margin-left: -1.5625rem;
+            width: 17vw;
+            height: 2.1875rem
+        }
+    }
 }
+    
