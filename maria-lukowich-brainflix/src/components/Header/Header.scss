@@ -46,25 +46,28 @@ header{
         width: 66vw;
         max-height: 2.1875rem;
         padding: .9375rem;
-        border-radius: 4px;
+        border-radius: .25rem;
         position: relative;
+        transition: background-color  0.3s ease;
 
-        &::before {
-            content: "";
-            position: absolute;
-            background: url("../../assets/Icons/search.svg") no-repeat center center;
-            background-size: 1.875rem;
-            right: .625rem;
-            top: 25%;
-            height: 2rem;
-            width: 2rem;
+        &::placeholder{
+            @include body;
+        }
+        &:not(:placeholder-shown) {
+            @include body;
+            color: $primary-black;
+        }
+        &:focus {
+            border-color: $primary-black;
+            @include body;
+            outline: none; 
         }
     }
     &__profile-img{
         border-radius: 50%;
         height: 3.25rem;
         width: 3.25rem;
-        // aspect-ratio: 16/19;
+        margin-top: -0.3125rem;
     }
     @include tablet{
         &__search-box{
@@ -116,7 +119,7 @@ header{
             background-color: $primary-blue;
             color: $white;
             max-height: 2.5rem;
-            width: 20vw;
+            width: 17vw;
             padding: 1.5rem;
 
             &::before {
