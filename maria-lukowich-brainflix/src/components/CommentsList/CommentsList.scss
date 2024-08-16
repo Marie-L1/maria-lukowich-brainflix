@@ -1,0 +1,29 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comments-list{
+    display: flex;
+    flex-direction: column;
+
+    &__item{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        @include body;
+
+    }
+    &__profile-img{
+        
+
+    }
+    &__name{
+
+    }
+    &__content{
+
+    }
+    &__date{
+
+    }
+}
