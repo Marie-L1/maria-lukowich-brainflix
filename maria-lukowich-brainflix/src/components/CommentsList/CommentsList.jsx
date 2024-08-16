@@ -1,4 +1,5 @@
 import "./CommentsList.scss";
+import avatar from "../../assets/Images/grey-background.png";
 
 const formatTimestamp = (timestamp) => {
     const date = new Date(timestamp);
@@ -14,10 +15,12 @@ function CommentsList({comments}){
         <ul className="comments-list">
             {comments.map((comment, index) =>
             <li key={index} className="comments-list__item">
-                <img className="comments-list__profile-img" alt="blank profile image"></img>
-                <h3 className="comments-list__name">{comment.name}</h3>
-                <p className="comments-list__content">{comment.comment}</p>
-                <h3 className="comment-list__date">{formatTimestamp(comment.timestamp)}</h3>
+                <img src={avatar} className="comments-list__profile-img" alt="blank profile image"></img>
+                <div className="comments-list__text-wrapper">
+                  <h3 className="comments-list__name">{comment.name}</h3>
+                  <p className="comments-list__content">{comment.comment}</p>
+                </div>
+                <h3 className="comments-list__date">{formatTimestamp(comment.timestamp)}</h3>
             </li>)}
       </ul>
     )

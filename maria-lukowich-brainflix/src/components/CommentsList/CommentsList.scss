@@ -14,16 +14,39 @@
 
     }
     &__profile-img{
+        border-radius: 50%;
+        height: 3.25rem;
+        width: 3.25rem;
+        margin: .9375rem .625rem 0 -0.625rem;
         
 
     }
-    &__name{
-
+    &__text-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
+    // &__name{
+
+    // }
     &__content{
+        margin-top: -0.3125rem;
 
     }
     &__date{
+        @include videoList;
+        margin-right: 2.1875rem;
+    }
 
+    h3{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include tablet{
+
+    }
+    @include desktop{
+        
     }
 }

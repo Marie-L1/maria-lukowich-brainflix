@@ -1,2 +1,54 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.comments{
+
+    &__length{
+        @include comments-length;
+        margin-bottom: -5px;
+        margin-left: 20px;
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: flex-start;
+        margin-left: 6.25rem;
+    }
+    &__join-convo{
+        @include videoList;
+        margin-bottom: .625rem;
+
+    }
+    &__textarea{
+        padding: .625rem;
+        background-color: $alabaster;
+        width: 70vw;
+        height: 14vh;
+        margin-right: 2.5rem;
+
+    }
+    &__main-img{
+        height: 3.25rem;
+        width: 3.25rem;
+        border-radius: 50%;
+        margin-left: 1.5625rem;
+        margin-bottom: -4.6875rem;
+    }
+    &__add-btn{
+        margin-top: 1.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-blue;
+        color: $white;
+        border: none;
+        border-radius: .25rem;
+        height: 2.5rem;
+        padding: 0 2rem;
+        width: 75vw;
+    }
+}

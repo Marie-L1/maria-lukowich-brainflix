@@ -118,6 +118,13 @@
     @include body;
 }
 
+@mixin comments-length{
+    font-size: .8125rem;
+    line-height: 1.125rem;
+    font-weight: 600;
+    font-family: "Avenir Next Demi";
+}
+
 
 // flex mixins
 @mixin flex-row{
