@@ -10,7 +10,9 @@ function VideoPlayer({ video, poster, title, channel, timestamp, views, likes}){
             <source src={video}></source>
           </video>
         </div>
+        
         <h1 className="video-player__title">{title}</h1>
+
         <div className="video-player__info">
           <div className="video-player__info--left">
             <p className="video-player__channel">By {channel}</p>
