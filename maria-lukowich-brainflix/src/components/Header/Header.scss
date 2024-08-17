@@ -193,8 +193,7 @@ header{
         &__btn{
             width: 20vw;
             padding: 1.5rem;
-            margin-left: -100px;
-            margin-top: 20px;
+            margin: 1.25rem 0 1.25rem -4.6875rem;
 
             &::before {
                 top: 20%;
@@ -208,7 +207,6 @@ header{
         &__btn{
             width: 17vw;
             padding: 1.5rem;
-
         }
     }
 }
