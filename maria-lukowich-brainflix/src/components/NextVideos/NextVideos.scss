@@ -64,17 +64,18 @@
     
       @include desktop {
         // Desktop-specific styles
-        margin-left: 870px;
+        margin-left: 830px;
         margin-top: 70px;
         position: relative;
           
           &::before {
               content: "";
               position: absolute;
-              top: 0;
+              top: -7.1875rem;
               bottom: 0;
-              left: 7.8125rem; // Adjust this value to bring the border closer
+              left: 8rem; 
               width: .625rem;
+              height: 110vh;
               border-left: .0625rem solid $mercury;
           }
 
@@ -96,7 +97,7 @@
         &__text{
             display: flex;
             flex-direction: column;
-            margin-right: 4.375rem;
+            margin-right: 4rem;
                         
         }
         &__title{
