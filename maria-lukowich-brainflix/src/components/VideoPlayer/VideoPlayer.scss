@@ -3,8 +3,7 @@
 
 .video-player{
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
 
     &__video-wrapper{
         background-color: $primary-black;
@@ -17,20 +16,18 @@
     &__title{
         @include page-header;
         color: $primary-black;
-        display: flex;
-        justify-content: flex-start;
+        @include flex-start-justify;
         flex-wrap: wrap;
         margin: 1.25rem;
     }
     &__info{
         @include body;
         color: $primary-black;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+        @include flex-row;
+        @include flex-start-justify;
         align-items: flex-start;
         margin: 0 0 1.25rem 1.5625rem;
-        gap: 1.875rem;
+        gap: 3.5rem;
         position: relative;
         
         &::before, &::after { 
@@ -50,40 +47,29 @@
             }
         }
     &__info-wrapper{
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         align-items: flex-start;
     }
     &__info-likes, &__info-views {
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         align-items: center;
         gap: .625rem;
     }
     &__info-left{
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
     }
     &__channel{
         font-weight: 600;
-
     }
     &__timestamp{
         @include video-info;
-
     }
     &__views-img, &__likes-img{
       height: 1.25rem;
       width: 1.25rem;
-
     }
-    &__views {
+    &__views, &__likes  {
         @include video-info;
-
-    }
-    &__likes{
-        @include video-info;
-
     }
 
     @include tablet {
@@ -95,10 +81,6 @@
             margin: 1.25rem 1.25rem 1.25rem 3rem;
         }
         &__info{
-            @include body;
-            color: $primary-black;
-            display: flex;
-            flex-direction: row;
             justify-content: space-between;
             margin: 0 2.5rem 1.25rem 2.8rem;
             gap: 0;
@@ -113,36 +95,9 @@
                 width: 100%;
             }
         }
-        &__info-wrapper{
-            display: flex;
-            flex-direction: row;
-            gap: 30px;
-        }
-        &__info-left{
-            display: flex;
-            flex-direction: row;
-            gap: 30px;
-        }
-        &__channel{
-            font-weight: 600;
-    
-        }
-        &__timestamp{
-            @include video-info;
-    
-        }
-        &__views-img, &__likes-img{
-          height: 1.25rem;
-          width: 1.25rem;
-    
-        }
-        &__views {
-            @include video-info;
-    
-        }
-        &__likes{
-            @include video-info;
-    
+        &__info-wrapper, &__info-left{
+            @include flex-row;
+            gap: 1.875rem;
         }
       }
     
@@ -167,39 +122,9 @@
                 width: 67%;
             }
             }
-        &__info-wrapper{
-            display: flex;
-            flex-direction: row;
-            gap: 30px;
-        }
-        &__info-left{
-            display: flex;
-            flex-direction: row;
-            gap: 30px;
-        }
-        &__channel{
-            font-weight: 600;
-    
-        }
-        &__timestamp{
-            @include video-info;
-    
-        }
-        &__views-img, &__likes-img{
-          height: 1.25rem;
-          width: 1.25rem;
-    
-        }
-        &__views {
-            @include video-info;
-    
-        }
-        &__likes{
-            @include video-info;
-    
+        &__info-wrapper, &__info-left{
+            @include flex-row;
+            gap: 1.875rem;
         }
       }
-    
-
-    
 }

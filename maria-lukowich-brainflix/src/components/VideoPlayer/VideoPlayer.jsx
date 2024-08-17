@@ -26,9 +26,9 @@ function VideoPlayer({ video, poster, title, channel, timestamp, views, likes}){
             <div className="video-player__info-likes">
                 <img className="video-player__likes-img" src={likes_img} alt="likes"></img>
                 <p className="video-player__likes">{likes}</p>
+            </div>
           </div>
-          </div>
-          </div>
+        </div>
       </section>
     );
 }

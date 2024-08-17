@@ -11,12 +11,10 @@
         flex-wrap: wrap; 
 
         @include tablet {
-            // Tablet-specific styles
               margin: 0 50px;
           }
         
           @include desktop {
-            // Desktop-specific styles
               margin: 0 22.5rem .625rem 5.9375rem;
           }
     }

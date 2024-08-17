@@ -6,14 +6,12 @@
     flex-direction: column;
 
     &__item{
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         justify-content: space-around;
         align-items: flex-start;
         @include body;
         position: relative;
         
-
         &::before, &::after { 
             content: "";
             position: absolute;
@@ -29,19 +27,15 @@
             &::after {
                 bottom: 0;
             }
-
     }
     &__profile-img{
         border-radius: 50%;
         height: 3.25rem;
         width: 3.25rem;
-        margin: .9375rem .625rem 0 -0.625rem;
-        
-
+        margin: .9375rem 1rem 0 -0.625rem;
     }
     &__text-wrapper{
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         justify-content: flex-start;
     }
     &__name{
@@ -58,8 +52,7 @@
     }
 
     h3{
-        display: flex;
-        justify-content: space-between;
+        @include space-between;
     }
 
     @include tablet{
@@ -83,8 +76,7 @@
 
     }
     @include desktop{
-        margin-right: 18rem;
-        margin-left: 2.8125rem;
+        margin: 0 18rem 0 2.8125rem;
 
         &__item{
         

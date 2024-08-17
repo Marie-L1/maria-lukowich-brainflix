@@ -5,16 +5,12 @@
 
     &__length{
         @include comments-length;
-        margin-bottom: -5px;
-        margin-left: 20px;
+        margin: 1.25rem 0 -0.3125rem 1.25rem;
     }
-
     &__wrapper{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include flex-column;
+        @include flex-center-content;
         flex-wrap: wrap;
-        align-content: center;
         align-items: flex-start;
         margin-left: 6.25rem;
     }
@@ -30,7 +26,7 @@
         width: 70vw;
         height: 14vh;
         margin-right: 2.5rem;
-        border: .0625rem solid $mercury;
+        border: .125rem solid $mercury;
         border-radius: 4px;
         box-sizing: border-box;
         transition: background-color  0.3s ease;
@@ -40,10 +36,10 @@
         }
         &:not(:placeholder-shown) {
             @include body;
-            color: $primary-black;
+            color: $primary-blue;
         }
         &:focus {
-            border-color: $primary-black;
+            border-color: $primary-blue;
             @include body;
             outline: none; 
         }
@@ -52,14 +48,11 @@
         height: 3.25rem;
         width: 3.25rem;
         border-radius: 50%;
-        margin-left: 1.5625rem;
-        margin-bottom: -4.6875rem;
+        margin: 0 0 -4.6875rem 1.5625rem;
     }
     &__add-btn{
         margin-top: 1.25rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center-items;
         background-color: $primary-blue;
         color: $white;
         border: none;
@@ -91,8 +84,8 @@
             flex-wrap: nowrap;
         }
         &__textarea-comment{
-            display: flex;
-            flex-direction: row;
+            @include flex-row;
+            margin-bottom: 1.25rem;
         }
         &__textarea{
             width: 66vw;
@@ -100,12 +93,10 @@
             margin-right: 2.5rem;
         }
         &__main-img{
-            margin-left: 1.5625rem;
-            margin-bottom: -4.6875rem;
+            margin: 0 0 -4.6875rem 2rem;
         }
         &__add-btn{
-            margin-top: -0.1rem;
-            margin-left: -1.5625rem;
+            margin: -0.1rem 0 0 -1.5625rem;
             width: 17vw;
             height: 2.1875rem
         }
@@ -121,9 +112,8 @@
             margin-left: 10.9375rem;
         }
         &__textarea-comment{
-            display: flex;
-            flex-direction: row;
-            margin-bottom: .625rem;
+            @include flex-row;
+            margin-bottom: 1rem;
         }
         &__textarea{
             width: 47vw;
@@ -131,14 +121,12 @@
             margin-right: 2.5rem;
         }
         &__main-img{
-            margin-left: 6rem;
-            margin-bottom: -4.4rem;
+            margin: 0 0 -4.2rem 6rem;
             height: 2.55rem;
             width: 2.55rem;
         }
         &__add-btn{
-            margin-top: -0.1rem;
-            margin-left: -1.5625rem;
+            margin: -0.1rem 0 0 -1.5625rem;
             width: 12vw;
             height: 2.1875rem
         }
