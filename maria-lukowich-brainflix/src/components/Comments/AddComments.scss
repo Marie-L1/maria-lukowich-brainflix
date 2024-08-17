@@ -67,6 +67,20 @@
         height: 2.5rem;
         padding: 0 2rem;
         width: 70vw;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("../../assets//Icons/add_comment.svg") no-repeat center;
+            background-size: 1.5rem;
+            left: .625rem;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 1.15rem;
+            width: 1.15rem;
+            pointer-events: none;
+        }
     }
     @include tablet {
         // Tablet-specific styles
