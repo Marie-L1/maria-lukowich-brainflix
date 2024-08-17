@@ -74,6 +74,9 @@
             width: 1.15rem;
             pointer-events: none;
         }
+        &:hover{
+            background-color: $secondary-darkBlue;
+        }
     }
     @include tablet {
         // Tablet-specific styles

@@ -4,7 +4,7 @@ import videoData from './Data/video-details.json'
 import Header from './components/Header/Header';
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import VideoDescription from './components/VideoDescription/VideoDescription';
-import AddComments from './components/Comments/AddComments';
+import AddComments from './components/AddComments/AddComments';
 import CommentsList from './components/CommentsList/CommentsList';
 import NextVideos from './components/NextVideos/NextVideos';
 
