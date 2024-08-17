@@ -77,12 +77,15 @@ header{
     &__search-box{
         background-color: $alabaster;
         border: solid .125rem $mercury;
-        width: 66vw;
+        width: 64vw;
         max-height: 2.1875rem;
-        padding: .9375rem;
+        padding: .9375rem .9375rem .9375rem 2.65rem;
         border-radius: .25rem;
         position: relative;
         transition: background-color  0.3s ease;
+        background: url("../../assets/Icons/search.svg") no-repeat left center;
+        background-size: 1.5rem; 
+        background-position: 0.75rem center;
 
         // placeholder styling
         &::placeholder{
@@ -96,22 +99,8 @@ header{
         // focus state styling
         &:focus {
             border-color: $primary-black;
+            outline: none;
             @include body;
-            // outline: none; 
-        }
-        // adding the magnifying glass icon- come back to
-        &::before {
-            content: "";
-            position: absolute;
-            background: url("../../assets/Icons/search.svg") no-repeat center;
-            background-size: 1.5rem;  // Adjust the icon size as needed
-            left: .625rem;  // Position the icon
-            top: 50%;  // Center the icon vertically
-            transform: translateY(-50%);  // Adjust for perfect vertical alignment
-            height: 1.5rem;  // Match the icon size
-            width: 1.5rem;  // Match the icon size
-            pointer-events: none;  // Prevent the icon from interfering with input interactions
-            z-index: 2;
         }
     }
     &__profile-img{
