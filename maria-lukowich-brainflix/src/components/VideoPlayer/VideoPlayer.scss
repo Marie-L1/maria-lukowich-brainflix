@@ -148,15 +148,15 @@
             height: 75vh;
         }
         &__title{
-            margin: 1.25rem 1.25rem 1.25rem 5.5rem;
+            margin: 1.25rem 1.25rem .3125rem 5.5rem;
         }
         &__info{
             justify-content: space-around;
             margin: 0 7rem 1.25rem -8.5rem;
             
             &::after { 
-                left: 52%;
-                width: 68%;
+                left: 50%;
+                width: 66%;
             }
             }
         &__info-wrapper{

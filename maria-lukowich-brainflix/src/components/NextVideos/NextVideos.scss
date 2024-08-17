@@ -11,6 +11,11 @@
     
       @include desktop {
         // Desktop-specific styles
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 220px;
+        margin-bottom: -50px;
+        margin-top: -630px;
       }
     
 }
@@ -46,6 +51,7 @@
     }
     &__creator{
         @include nextVideo-creator;
+  
     }
 
     @include tablet {
@@ -58,6 +64,51 @@
     
       @include desktop {
         // Desktop-specific styles
+        margin-left: 870px;
+        margin-top: 70px;
+        position: relative;
+          
+          &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 7.8125rem; // Adjust this value to bring the border closer
+              width: .625rem;
+              border-left: .0625rem solid $mercury;
+          }
+
+        &__item{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .625rem;
+            margin: 0 0.25rem 0 6.5rem;
+        }
+        &__img{
+          border-radius: .25rem;  
+          width: 5rem;
+          max-height: 20vh;
+          margin-bottom: 40px;
+    
+        }
+        &__text{
+            display: flex;
+            flex-direction: column;
+            margin-right: 4.375rem;
+                        
+        }
+        &__title{
+            @include section-header;
+            margin-top: -1.25rem;
+        }
+        &__creator{
+            @include body;
+            margin-top: -0.625rem;
+        }
+        
+       
       }
     
 }
