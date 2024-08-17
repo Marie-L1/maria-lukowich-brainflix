@@ -83,13 +83,15 @@
 
     }
     @include desktop{
+        margin-right: 15.5rem;
+        margin-left: 2.8125rem;
+
         &__item{
         
             &::before, &::after { 
                 left: 47%;
                 width: 96%;
             }
-    
         }
         &__profile-img{
             margin: .9375rem -1.25rem 0 0.625rem;
