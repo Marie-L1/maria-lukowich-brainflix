@@ -83,6 +83,25 @@
 
     }
     @include desktop{
+        &__item{
+        
+            &::before, &::after { 
+                left: 47%;
+                width: 96%;
+            }
+    
+        }
+        &__profile-img{
+            margin: .9375rem -1.25rem 0 0.625rem;
+            height: 2.55rem;
+            width: 2.55rem;
+        }
+        &__text-wrapper{
+            margin-left: 2.5rem;
+        }
+        &__date{
+            margin-right: 3.125rem;
+        }
         
     }
 }
