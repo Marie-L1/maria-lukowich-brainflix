@@ -8,7 +8,7 @@ import AddComments from '../../components/AddComments/AddComments.jsx';
 import CommentsList from '../../components/CommentsList/CommentsList.jsx';
 import NextVideos from '../../components/NextVideos/NextVideos.jsx';
 
-function App() {
+function Home() {
 
   // useState to identify videos by their id
   const [videoPlayer, setVideoPlayer] = useState(videoData.find(
@@ -45,4 +45,4 @@ function App() {
   )
 }
 
-export default App
+export default Home;

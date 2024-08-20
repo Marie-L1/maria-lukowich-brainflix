@@ -165,7 +165,7 @@ header{
         @include flex-center-content;
         flex-wrap: wrap;
         background-color: $primary-blue;
-        color: $white;
+        color: white;
         max-height: 2.5rem;
         width: 90vw;
         padding: 2rem;
@@ -173,6 +173,7 @@ header{
         position: relative;
         border: none;
         margin-bottom: 1.25rem;
+    
 
         &::before {
             content: "";
@@ -187,6 +188,9 @@ header{
         &:hover{
             background-color: $secondary-darkBlue;
         }
+    }
+    &__btn-link {
+        text-decoration: none;
     }
     @include tablet{
         
