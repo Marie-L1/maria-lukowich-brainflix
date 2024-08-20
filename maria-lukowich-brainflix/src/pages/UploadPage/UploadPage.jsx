@@ -14,11 +14,11 @@ function UploadPage(){
         <section className="upload-input">
             <form className="upload-input__form">
                 <div className="upload-input__title-wrapper">
-                    <label name="upload-input__title-label">TITLE YOUR VIDEO</label>
+                    <label className="upload-input__title-label">TITLE YOUR VIDEO</label>
                     <input id="videoTitle" name="videoTitle" className="upload-input__video-title" placeholder="Add a title to your video"></input>
                 </div>
                 <div className="upload-input__description-wrapper">
-                    <label name="upload-input__description-label">ADD A VIDEO DESCRIPTION</label>
+                    <label className="upload-input__description-label">ADD A VIDEO DESCRIPTION</label>
                     <textarea id="videoDescription" name="videoDescription" className="upload-input__video-description" placeholder="Add a description to you video"></textarea>
                 </div>
             </form>

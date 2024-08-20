@@ -42,6 +42,42 @@
     }
 
     @include tablet{
+        @include flex-column;
+        justify-content: flex-start;
+    
+        &__title{
+            @include page-header;
+            position: relative;
+            padding-top: 20px;
+            
+            &::before { 
+                content: "";
+                position: absolute;
+                left: 45%;
+                width: 120%;
+                height: .0625rem;
+                background-color: $mercury;
+                transform: translateX(-50%);
+            }
+                &::before {
+                    top: 0;
+                }
+        }
+        // &__subtitle{
+        //     @include video-info;
+    
+        // }
+        &__img-wrapper{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        &__img{
+            width: 50vw;
+            height: 100%;
+            background-color: $mercury;
+            margin-bottom: 30px;
+        }
 
     }
     @include desktop{
@@ -50,8 +86,6 @@
 }
 
 .upload-input{
-
-
     &__form{
         display: flex;
         flex-direction: column;
@@ -122,6 +156,15 @@
     }
 
     @include tablet{
+        &__title-wrapper, &__description-wrapper{
+            margin-left: 1.25rem;
+        }
+        &__video-title{
+            width: 92vw;
+        }
+        &__video-description{
+            width: 95vw;
+        }
 
     }
     @include desktop{
@@ -176,14 +219,19 @@
         position: relative;
         border: none;
         margin-bottom: 1.25rem;
-    
-
     }
 
     @include tablet{
-
-    }
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        margin: 3.125rem 0.9375rem 0 0;
+    
+        &__publish,  &__cancel{
+            width: 23vw;
+        }
     @include desktop{
         
+    }
     }
 }
