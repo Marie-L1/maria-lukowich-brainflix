@@ -4,6 +4,7 @@ import track from "../../assets/Images/Upload-video-preview.jpg"
 function UploadPage(){
     return(
         <>
+        <article>
         <section className="hero">
             <h1 className="hero__title">Upload Video</h1>
             <h3 className="hero__subtitle">VIDEO THUMBNAIL</h3>
@@ -23,12 +24,13 @@ function UploadPage(){
                 </div>
             </form>
         </section>
+        </article>
         <section className="btns">
             <button className="btns__publish">PUBLISH</button>
             <button className="btns__cancel">CANCEL</button>
         </section>
-        
         </>
+        
     )
 }
 
