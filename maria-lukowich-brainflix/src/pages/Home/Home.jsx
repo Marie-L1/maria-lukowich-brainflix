@@ -1,12 +1,12 @@
-import './App.scss'
+import '../../App.jsx'
 import { useState } from 'react';
-import videoData from '../../video-details.json'
-import Header from '../../components/Header/Header';
-import VideoPlayer from '../../components/VideoPlayer/VideoPlayer';
-import VideoDescription from '../../components/VideoDescription/VideoDescription';
-import AddComments from '../../components/AddComments/AddComments';
-import CommentsList from '../../components/CommentsList/CommentsList';
-import NextVideos from '../../components/NextVideos/NextVideos';
+import videoData from '../../Data/video-details.json'
+import Header from '../../components/Header/Header.jsx';
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer.jsx';
+import VideoDescription from '../../components/VideoDescription/VideoDescription.jsx';
+import AddComments from '../../components/AddComments/AddComments.jsx';
+import CommentsList from '../../components/CommentsList/CommentsList.jsx';
+import NextVideos from '../../components/NextVideos/NextVideos.jsx';
 
 function App() {
 
@@ -23,7 +23,6 @@ function App() {
 
   return (
     <>
-      <Header />
       <VideoPlayer 
       video={videoPlayer.video}
       poster={videoPlayer.image} 
