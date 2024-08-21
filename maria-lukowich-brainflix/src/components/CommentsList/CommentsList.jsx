@@ -18,7 +18,6 @@ const formatTimestamp = (timestamp) => {
   function CommentsList({ comments = [] }) {  // default is an empty array
     return (
         <ul className="comments-list">
-            <li>Comments list component is rendering</li>
             {comments.length > 0 ? (
                 comments.map((comment) => (
                     <li key={comment.id} className="comments-list__item">
