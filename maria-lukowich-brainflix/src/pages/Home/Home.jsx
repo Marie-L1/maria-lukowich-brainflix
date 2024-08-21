@@ -17,6 +17,7 @@ function Home() {
   const navigate = useNavigate();
   
   const [videoList, setVideolist] = useState([]);
+  console.log(videoList);
   const [currentVideo, setCurrentVideo] = useState({});
 
 
@@ -28,25 +29,33 @@ function Home() {
         const response = await axios.get(`${baseURL}/videos/?api_key=${apiKey}`);
         console.log(response.data)
         setVideolist(response.data)
-
-        // set the current video based on the video id
-        if (id){
-          const currentVideo = await axios.get(`${baseURL}/videos/${id}?api_key=${apiKey}`);
-          setCurrentVideo(currentVideo.data);
-        } else if (response.data.length > 0){
-          setCurrentVideo(response.data[0]);
-        }
-
         
       }catch(error){
         console.error("Error fetching video", error)
       }
     };
     fetchVideos();
-  }, [id, apiKey, baseURL])  // only runs if the id changes
+  }, [])
+
+
+  useEffect (() =>{
+    const fetchCurrentVideo = async () =>{
+      try{
+        if (id){
+          const currentVideo = await axios.get(`${baseURL}/videos/:${id}?api_key=${apiKey}`);
+          setCurrentVideo(currentVideo.data);
+        } else if (videoList.length === 0){
+          setCurrentVideo(videoList[0]);
+        }
+      } catch(error){
+        console.error("Error fetching current video", error)
+      }
+      }
+    fetchCurrentVideo();
+  }, [id])
 
   const handleVideoSelection = (videoId) => {
-    navigate(`/video/${videoId}`)
+    navigate(`/video/:${videoId}`)
   }
 
   return (
@@ -67,7 +76,7 @@ function Home() {
       <CommentsList comments={currentVideo.comments} />
       </>
     )}
-      <NextVideos   videos={videoList.filter(video => video.id !== currentVideo.id)}
+      <NextVideos videos={videoList.filter(video => video.id !== currentVideo.id)}
       nextVideoClick={handleVideoSelection} 
       />
     </>
