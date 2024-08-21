@@ -11,6 +11,7 @@ function Home() {
 
   const apiKey = "386a3636-1369-4ba2-a0a8-17b796d2aa27";
   const baseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com";
+
   const { id } = useParams(); // GET the video id from the url
   console.log("The video id:", id);
   const navigate = useNavigate();
@@ -50,6 +51,8 @@ function Home() {
 
   return (
     <>
+    {currentVideo && (
+    <>
       <VideoPlayer 
       video={currentVideo.video}
       poster={currentVideo.image} 
@@ -60,12 +63,12 @@ function Home() {
       likes={currentVideo.likes}
       />
       <VideoDescription description={currentVideo.description} />
-
       <AddComments comments={currentVideo.comments} />
       <CommentsList comments={currentVideo.comments} />
-
-      <NextVideos videos={videoList.filter(video => video.id !== currentVideo.id)}
-      nextVideoClick={(videoId) => setCurrentVideo(videoList.find(video => video.id === videoId))} 
+      </>
+    )}
+      <NextVideos   videos={videoList.filter(video => video.id !== currentVideo.id)}
+      nextVideoClick={handleVideoSelection} 
       />
     </>
   );

@@ -13,7 +13,7 @@ function AddComments() {
             alt="mohan-muruge"
           ></img>
           <div className="comments__wrapper">
-            <label class="comments__join-convo">JOIN THE CONVERSATION</label>
+            <label className="comments__join-convo">JOIN THE CONVERSATION</label>
             <div className="comments__textarea-comment">
               <textarea
                 className="comments__textarea"
