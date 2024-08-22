@@ -10,7 +10,7 @@
     &__title{
         @include page-header;
         position: relative;
-        padding-top: 1.25rem;
+        padding: 2rem 0;
         margin-top: 0;
         
         &::before { 
@@ -43,6 +43,21 @@
     }
 
     @include tablet{
+
+        &__title{
+            &::after { 
+                content: "";
+                position: absolute;
+                height: .0625rem;
+                left: 50%;
+                width: 100%;
+                background-color: $mercury;
+                transform: translateX(-50%);
+            }
+                &::after {
+                    bottom: 0;
+                }
+        }
     
         &__img-wrapper{
             justify-content: flex-start;
