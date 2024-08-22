@@ -12,7 +12,6 @@ function UploadPage(){
         </article>
         <PublishBtn />
         </>
-        
     )
 }
 

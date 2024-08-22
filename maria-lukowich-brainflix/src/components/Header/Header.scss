@@ -6,6 +6,7 @@ header{
     @include flex-column;
     align-items: center;
     flex-wrap: nowrap;
+    margin-left: 1.25rem;
 
     @include tablet {
         @include flex-row;
