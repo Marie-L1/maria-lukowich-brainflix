@@ -1,0 +1,61 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.hero{
+    margin-left: 1.875rem;
+    @include flex-column;
+    justify-content: flex-start;
+
+    &__title{
+        @include page-header;
+        position: relative;
+        padding-top: 20px;
+        
+        &::before { 
+            content: "";
+            position: absolute;
+            left: 45%;
+            width: 120%;
+            height: .0625rem;
+            background-color: $mercury;
+            transform: translateX(-50%);
+        }
+            &::before {
+                top: 0;
+            }
+    }
+    &__subtitle{
+        @include video-info;
+
+    }
+    &__img-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__img{
+        width: 95vw;
+        height: 100%;
+        background-color: $mercury;
+        margin-bottom: 1.875rem;
+    }
+
+    @include tablet{
+    
+        &__img-wrapper{
+            justify-content: flex-start;
+        }
+        &__img{
+            width: 50vw;
+        }
+    }
+    @include desktop{
+        &__img-wrapper{
+            justify-content: flex-start;
+        }
+        &__img{
+            width: 30vw;
+        }
+    }
+}

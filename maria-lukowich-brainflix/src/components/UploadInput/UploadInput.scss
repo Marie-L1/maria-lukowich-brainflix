@@ -1,0 +1,105 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.upload-input{
+    &__form{
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+        gap: .9375rem;
+    }
+    &__title-wrapper, &__description-wrapper{
+        @include flex-column;
+        gap: .3125rem;
+    }
+    &__title-label{
+        @include video-info;
+    }
+    &__video-title{
+        background-color: $alabaster;
+        border: solid .125rem $mercury;
+        width: 83vw;
+        max-height: 2.1875rem;
+        padding: .9375rem;
+        border-radius: .25rem;
+        position: relative;
+        transition: background-color  0.3s ease;
+
+        &::placeholder{
+            @include body;
+        }
+        // when the input has text
+        &:not(:placeholder-shown) {
+            @include body;
+            color: $primary-black;
+        }
+        // focus state styling
+        &:focus {
+            border-color: $primary-blue;
+            outline: none;
+            @include body;
+        }
+
+    }
+    &__description-label{
+        @include video-info;
+    }
+    &__video-description{
+        padding: .625rem;
+        background-color: $alabaster;
+        color: $primary-black;
+        width: 88vw;
+        height: 14vh;
+        border: .125rem solid $mercury;
+        border-radius: 4px;
+        box-sizing: border-box;
+        transition: background-color  0.3s ease;
+
+        &::placeholder{
+            @include body;
+        }
+        &:not(:placeholder-shown) {
+            @include body;
+            color: $primary-blue;
+        }
+        &:focus {
+            border-color: $primary-blue;
+            @include body;
+            outline: none; 
+        }
+
+    }
+
+    @include tablet{
+        &__title-wrapper, &__description-wrapper{
+            margin-left: 1.25rem;
+        }
+        &__video-title{
+            width: 92vw;
+        }
+        &__video-description{
+            width: 95vw;
+        }
+
+    }
+    @include desktop{
+
+        &__form{
+            margin-top: 7.5rem;
+            @include flex-column;
+        justify-content: flex-start;
+        align-items: center;
+        }
+        &__title-wrapper, &__description-wrapper{
+            margin-left: 2rem;
+        }
+        &__video-title{
+            width: 55vw;
+        }
+        &__video-description{
+            width: 57vw;
+        }
+        
+    }
+}

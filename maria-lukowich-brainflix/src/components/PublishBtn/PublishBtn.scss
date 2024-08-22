@@ -1,0 +1,73 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.btns{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.875rem;
+
+    &__publish{
+        @include flex-center-content;
+        flex-wrap: wrap;
+        background-color: $primary-blue;
+        color: $white;
+        max-height: 2.5rem;
+        width: 87vw;
+        padding: 2rem;
+        border-radius: .25rem;
+        position: relative;
+        border: none;
+        margin-bottom: 1.25rem;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("../../assets/Icons/publish.svg") no-repeat center;
+            background-size: 1.875rem;
+            left: .625rem;
+            top: 25%;
+            height: 2rem;
+            width: 2rem;
+        }
+        &:hover{
+            background-color: $secondary-darkBlue;
+        }
+    }
+
+    &__cancel{
+        @include flex-center-content;
+        flex-wrap: wrap;
+        background-color: $white;
+        color: $primary-blue;
+        max-height: 2.5rem;
+        width: 87vw;
+        padding: 2rem;
+        border-radius: .25rem;
+        position: relative;
+        border: none;
+        margin-bottom: 1.25rem;
+    }
+
+    @include tablet{
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        margin: 3.125rem 0.9375rem 0 0;
+    
+        &__publish,  &__cancel{
+            width: 23vw;
+        }
+    }
+    @include desktop{
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        margin: 3.125rem 3.5rem 31.25rem 0;
+    
+        &__publish,  &__cancel{
+            width: 18vw;
+        }
+        
+    }
+}
