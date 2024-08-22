@@ -26,15 +26,16 @@ function Home() {
 
         // If there's no ID in the URL and videoList has data, set the first video as current
         if (!id && response.data.length > 0) {
-          setCurrentVideo(response.data[0]);
+          navigate(`video/${response.data[0].id}`, {replace: true})
         }
-      } catch (error) {
+        } catch (error) {
         console.error("Error fetching videos", error);
       }
     };
 
     fetchVideos();
-  }, [id]); // Depend on `id` to refetch data if needed
+  }, [id, navigate]); // Depend on `id` to refetch data if needed
+
 
   // Fetch the current video when ID changes
   useEffect(() => {
@@ -51,6 +52,7 @@ function Home() {
 
     fetchCurrentVideo();
   }, [id]);
+
 
   // Handle video selection
   const handleVideoSelection = (videoId) => {
