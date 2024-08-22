@@ -67,6 +67,28 @@
         }
     }
     @include desktop{
+
+        &__title{
+            &::before, &::after { 
+                content: "";
+                position: absolute;
+                left: 45%;
+                width: 120%;
+                height: .0625rem;
+                background-color: $mercury;
+                transform: translateX(-50%);
+            }
+                &::before {
+                    top: 0;
+                    left: 150%;
+                    width: 500%;
+                }
+                &::after {
+                    bottom: 0;
+                    left: 150%;
+                    width: 300%;
+                }
+        }
         &__img-wrapper{
             justify-content: flex-start;
         }
