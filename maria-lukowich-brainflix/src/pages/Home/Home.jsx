@@ -1,3 +1,4 @@
+import "./Home.scss";
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -26,7 +27,7 @@ function Home() {
 
         // If there's no ID in the URL and videoList has data, set the first video as current
         if (!id && response.data.length > 0) {
-          navigate(`video/${response.data[0].id}`, {replace: true})
+          navigate(`/videos/${response.data[0].id}`, { replace: true });
         }
         } catch (error) {
         console.error("Error fetching videos", error);
@@ -60,28 +61,36 @@ function Home() {
   };
 
   return (
-    <>
+    <div>
       {currentVideo && (
-        <>
+        <div>
           <VideoPlayer 
             video={currentVideo.video}
             poster={currentVideo.image} 
-            title={currentVideo.title}
-            channel={currentVideo.channel}
-            timestamp={currentVideo.timestamp}
-            views={currentVideo.views}
-            likes={currentVideo.likes}
-          />
-          <VideoDescription description={currentVideo.description} />
-          <AddComments comments={currentVideo.comments} />
-          <CommentsList comments={currentVideo.comments} />
-        </>
+          /> 
+          <div className="home-flex">
+            <div className="home-flex__detailsComments">
+              <VideoDescription 
+                description={currentVideo.description}
+                title={currentVideo.title}
+                channel={currentVideo.channel}
+                timestamp={currentVideo.timestamp}
+                views={currentVideo.views}
+                likes={currentVideo.likes}
+              />
+              <AddComments comments={currentVideo.comments} />
+              <CommentsList comments={currentVideo.comments} />
+            </div>
+            <div className="home-flex__nextVideo">
+              <NextVideos 
+                videos={videoList.filter(video => video.id !== (currentVideo?.id || ''))}
+                nextVideoClick={handleVideoSelection} 
+              />
+            </div>
+          </div>
+        </div>
       )}
-      <NextVideos 
-        videos={videoList.filter(video => video.id !== (currentVideo?.id || ''))}
-        nextVideoClick={handleVideoSelection} 
-      />
-    </>
+    </div>
   );
 }
 

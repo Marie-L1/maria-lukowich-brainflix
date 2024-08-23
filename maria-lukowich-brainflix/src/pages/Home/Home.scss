@@ -1,0 +1,21 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.home-flex{
+
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+    
+        &__detailsComments{
+        
+    
+        }
+        &__nextVideo{
+            display: flex;
+            flex-direction: flex-start;
+    
+        }
+    }
+}
