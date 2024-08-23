@@ -1,11 +1,11 @@
 import "./AddComments.scss";
 import mohan from "../../assets/Images/Mohan-muruge.jpg";
 
-function AddComments() {
+function AddComments({ comments }) {
   return (
     <>
       <section className="comments">
-        <h4 className="comments__length">3 Comments</h4>
+        <h4 className="comments__length">{comments.length} Comments</h4>
         <form className="comments__new-comment">
           <img
             className="comments__main-img"
