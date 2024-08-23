@@ -14,15 +14,15 @@ function VideoDescription({ videoDetails }) {
       </div>
       <div className="video-details__info-wrapper" >
             <div className="video-details__info-views">
-                <img className="video-details__views-img" src={videoDetails.views_img} alt="views"></img>
+                <img className="video-details__views-img" src={views_img} alt="views"></img>
                 <p className="video-player__views">{videoDetails.views}</p>
             </div>
             <div className="video-details__info-likes">
-                <img className="video-details__likes-img" src={videoDetails.likes_img} alt="likes"></img>
+                <img className="video-details__likes-img" src={likes_img} alt="likes"></img>
                 <p className="video-details__likes">{videoDetails.likes}</p>
             </div>
         </div>
-    </div>
+     </div>
 
         <div className="video-details__description">
           <p className="video-details__description-text">{videoDetails.description}</p>

@@ -12,7 +12,7 @@ const apiKey = "386a3636-1369-4ba2-a0a8-17b796d2aa27";
 const baseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com";
 
 function Home() {
-  const { id } = useParams(); // GET the video ID from the URL
+  const { id } = useParams(); // GET the video id from the URL
   const navigate = useNavigate();
 
   const [videoList, setVideoList] = useState([]);
@@ -25,7 +25,7 @@ function Home() {
         const response = await axios.get(`${baseURL}/videos/?api_key=${apiKey}`);
         setVideoList(response.data);
 
-        // If there's no ID in the URL and videoList has data, set the first video as current
+        // If there's no id in the URL and videoList has data, set the first video as current
         if (!id && response.data.length > 0) {
           navigate(`/videos/${response.data[0].id}`, { replace: true });
         }
@@ -35,10 +35,10 @@ function Home() {
     };
 
     fetchVideos();
-  }, [id, navigate]); // Depend on `id` to refetch data if needed
+  }, [id, navigate]);
 
 
-  // Fetch the current video when ID changes
+  // Fetch the current video when the id changes
   useEffect(() => {
     const fetchCurrentVideo = async () => {
       if (id) {
