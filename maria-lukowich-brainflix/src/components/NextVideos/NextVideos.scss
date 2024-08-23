@@ -3,13 +3,15 @@
 
 .list-title{
     @include videoList;
-    margin-left: 20px;
+    margin-left: 1.25rem;
 
       @include desktop {
         // Desktop-specific styles
         display: flex;
-        justify-content: flex-end;
-        margin: -39rem 13.75rem -3.125rem 0;
+        justify-content: center;
+        margin-top: 25px;
+        margin-bottom: -685px;
+        margin-left: -500px;
       }
 }
 
@@ -89,7 +91,7 @@
         }
         &__creator{
             @include body;
-            // margin-top: -0.625rem;
+            margin-top: -0.1rem;
         }
       }
 }

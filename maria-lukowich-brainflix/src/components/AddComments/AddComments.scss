@@ -113,6 +113,7 @@
         &__wrapper{
             flex-wrap: nowrap;
             margin-left: 10.9375rem;
+            margin-bottom: 1.25rem;
         }
         &__textarea-comment{
             @include flex-row;
