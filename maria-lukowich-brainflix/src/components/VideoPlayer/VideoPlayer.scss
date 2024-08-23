@@ -2,9 +2,11 @@
 @use "../../styles/partials/variables" as *;
 
 .video-player{
+    
 
     &__video-wrapper{
         background-color: $primary-black;
+        background: cover;
     }
     &__video{
         width: 100%;
@@ -15,6 +17,7 @@
     @include tablet {
         &__video{
             height: 65vh;
+            width: 100%;
         }
       }
     
