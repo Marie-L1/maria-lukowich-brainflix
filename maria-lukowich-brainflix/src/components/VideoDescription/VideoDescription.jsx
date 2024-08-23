@@ -12,13 +12,6 @@ function VideoDescription({ title, channel, timestamp, views, likes, description
         <p className="video-details__channel">By {channel}</p>
         <p className="video-details__timestamp">{new Date(timestamp).toLocaleDateString()}</p>
       </div>
-      </div>
-
-      <section className="video-details__description">
-        <p className="video-details__description-text">{description}</p>
-      </section>
-
-      <div className="video-details__info">
       <div className="video-details__info-wrapper" >
             <div className="video-details__info-views">
                 <img className="video-details__views-img" src={views_img} alt="views"></img>
@@ -29,6 +22,10 @@ function VideoDescription({ title, channel, timestamp, views, likes, description
                 <p className="video-details__likes">{likes}</p>
             </div>
         </div>
+    </div>
+
+        <div className="video-details__description">
+          <p className="video-details__description-text">{description}</p>
         </div>
     </section>
   );

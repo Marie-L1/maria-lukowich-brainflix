@@ -20,14 +20,14 @@
         @include flex-start-justify;
         align-items: flex-start;
         margin: 0 0 1.25rem 1.5625rem;
-        gap: 3.5rem;
+        gap: 4rem;
         position: relative;
         
         &::before, &::after { 
             content: "";
             position: absolute;
-            left: 45%;
-            width: 93%;
+            left: 47%;
+            width: 95%;
             height: .0625rem;
             background-color: $mercury;
             transform: translateX(-50%);
