@@ -3,10 +3,8 @@
 
 
 .btns{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-column;
+    @include flex-center-items;
     padding-top: 1.875rem;
     margin: 0.875rem 0 0 1.5625rem;
     position: relative;
@@ -51,7 +49,6 @@
             background-color: $secondary-darkBlue;
         }
     }
-
     &__cancel{
         @include flex-center-content;
         flex-wrap: wrap;

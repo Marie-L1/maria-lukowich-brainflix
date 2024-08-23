@@ -5,8 +5,7 @@
 .upload-input{
     &__form{
         @include flex-column;
-        justify-content: center;
-        align-items: center;
+        @include flex-center-items;
         gap: .9375rem;
         margin-left: 1.5625rem;
     }
@@ -41,7 +40,6 @@
             outline: none;
             @include body;
         }
-
     }
     &__description-label{
         @include video-info;
@@ -53,7 +51,7 @@
         width: 94vw;
         height: 14vh;
         border: .125rem solid $mercury;
-        border-radius: 4px;
+        border-radius: .25rem;
         box-sizing: border-box;
         transition: background-color  0.3s ease;
 
@@ -69,7 +67,6 @@
             @include body;
             outline: none; 
         }
-
     }
 
     @include tablet{

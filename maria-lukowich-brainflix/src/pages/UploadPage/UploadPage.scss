@@ -4,7 +4,6 @@
 article{
     @include desktop{
         @include flex-row;
-        align-items: center;
-        justify-content: center;
+        @include flex-center-items;
     }
 }

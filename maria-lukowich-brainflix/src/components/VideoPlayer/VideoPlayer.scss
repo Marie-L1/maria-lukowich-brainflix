@@ -3,7 +3,6 @@
 
 .video-player{
     width: 102vw;
-    
 
     &__video-wrapper{
         background-color: $primary-black;
@@ -18,7 +17,6 @@
     @include tablet {
         &__video{
             height: 65vh;
-            width: 100%;
         }
       }
     

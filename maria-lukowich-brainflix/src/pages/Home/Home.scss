@@ -4,14 +4,9 @@
 .home-flex{
 
     @include desktop{
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         gap: 0;
     
-        // &__detailsComments{
-        
-    
-        // }
         &__nextVideo{
             display: flex;
             flex-direction: flex-start;

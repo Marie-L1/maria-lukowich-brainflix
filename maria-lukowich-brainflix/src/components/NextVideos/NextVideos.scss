@@ -6,12 +6,9 @@
     margin-left: 1.25rem;
 
       @include desktop {
-        // Desktop-specific styles
         display: flex;
         justify-content: center;
-        margin-top: 25px;
-        margin-bottom: -685px;
-        margin-left: -500px;
+        margin: 1.5625rem 0 -42.8125rem -31.25rem;
       }
 }
 
@@ -31,34 +28,28 @@
       width: 9rem;
       max-height: 15vh;
       margin-bottom: -0.625rem;
-
     }
     &__text{
         @include flex-column;
         justify-content: space-evenly;
-        
     }
     &__title{
         @include subheader;
     }
     &__creator{
         @include nextVideo-creator;
-  
     }
 
     @include tablet {
-        // Tablet-specific styles
         &__title{
           display: flex;
           flex-wrap: wrap;
       }
-      }
+    }
     
       @include desktop {
-        // Desktop-specific styles
-        margin-top: 685px;
+        margin: 42.8125rem 0 0 -12.5rem;
         position: relative;
-        margin-left: -12.5rem;
           
           &::before {
               content: "";
@@ -80,11 +71,9 @@
           border-radius: .25rem;  
           width: 6rem;
           height: 4.375rem;
-    
         }
         &__text{
-            margin-right: 4rem;
-                        
+            margin-right: 4rem;             
         }
         &__title{
             @include section-header;
@@ -93,5 +82,5 @@
             @include body;
             margin-top: -0.1rem;
         }
-      }
+    }
 }

@@ -8,7 +8,7 @@ function Hero() {
         <h1 className="hero__title">Upload Video</h1>
         <h3 className="hero__subtitle">VIDEO THUMBNAIL</h3>
         <div className="hero__img-wrapper">
-            <img className="hero__img" src={track} alt="track runner"></img>
+          <img className="hero__img" src={track} alt="track runner"></img>
         </div>
     </section>
   )

@@ -68,9 +68,8 @@
         @include body;
         display: flex;
         flex-direction: center;
-        margin: 0 20px;
+        margin: 0 1.25rem;
         flex-wrap: wrap; 
-
     }
 
     @include tablet {
