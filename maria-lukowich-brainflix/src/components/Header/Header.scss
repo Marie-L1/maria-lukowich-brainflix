@@ -30,7 +30,7 @@ header{
 
     @include desktop{
         @include flex-row;
-        justify-content: space-around;
+        justify-content: center;
 
         .header-logo__img {
             order: 1;
@@ -100,7 +100,7 @@ header{
 
 .header-input{
     @include flex-row;
-    padding: 20px;
+    padding: 1.25rem;
     gap: .9375rem;
 
     &__profile-img--mobile{
@@ -147,6 +147,9 @@ header{
         }
     }
     @include desktop{
+        padding: 0;
+        gap: 0;
+
         &__profile-img--mobile{
             display: none;
         }

@@ -28,7 +28,8 @@
         background-color: $primary-blue;
         color: $white;
         max-height: 2.5rem;
-        width: 94vw;
+        width: 85vw;
+        margin-right: 15px;
         padding: 2rem;
         border-radius: .25rem;
         position: relative;
@@ -55,7 +56,8 @@
         background-color: $white;
         color: $primary-blue;
         max-height: 2.5rem;
-        width: 87vw;
+        width: 85vw;
+        margin-right: 15px;
         padding: 2rem;
         border-radius: .25rem;
         position: relative;
@@ -66,11 +68,11 @@
     @include tablet{
         flex-direction: row-reverse;
         justify-content: flex-start;
-        margin: 3.125rem 0 0 0;
+        margin: 3.125rem 2.8rem 0 0;
         
         &::before { 
-            left: 53%;
-            width: 95%;
+            left: 54%;
+            width: 92%;
         }
     
         &__publish,  &__cancel{
@@ -80,11 +82,11 @@
     @include desktop{
         flex-direction: row-reverse;
         justify-content: flex-start;
-        margin: 3.125rem -17rem 31.25rem 0;
+        margin: 3.125rem 6rem 31.25rem 0;
         
         &::before { 
-            left: 62%;
-            width: 76%;
+            left: 53%;
+            width: 93%;
         }
     
         &__publish,  &__cancel{
