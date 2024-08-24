@@ -80,7 +80,12 @@
     @include desktop{
         flex-direction: row-reverse;
         justify-content: flex-start;
-        margin: 3.125rem 2.5rem 31.25rem 0;
+        margin: 3.125rem -8rem 31.25rem 0;
+        
+        &::before { 
+            left: 59%;
+            width: 83%;
+        }
     
         &__publish,  &__cancel{
             width: 18vw;

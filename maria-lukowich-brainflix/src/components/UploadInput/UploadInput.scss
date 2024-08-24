@@ -84,10 +84,10 @@
     @include desktop{
 
         &__form{
-            margin-top: 7.5rem;
             @include flex-column;
-        justify-content: flex-start;
-        align-items: center;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 7.5rem -25rem 0 0;
         }
         &__title-wrapper, &__description-wrapper{
             margin-left: 2rem;
