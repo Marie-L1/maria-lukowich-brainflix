@@ -1,5 +1,5 @@
 import "./UploadPage.scss"
-import Hero from "../../components/Hero/Hero"
+import Hero from "../../components/UploadHero/Hero"
 import UploadInput from "../../components/UploadInput/UploadInput"
 import PublishBtn from "../../components/PublishBtn/PublishBtn"
 
