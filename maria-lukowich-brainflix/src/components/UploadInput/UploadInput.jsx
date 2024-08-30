@@ -54,7 +54,7 @@ function UploadInput({ title, description, setTitle, setDescription, handleFormS
           />
         </div>
         <div className="btns">
-          <button className="btns__publish" type="submit" onClick={handlePublishClick}>PUBLISH</button>
+          <button className="btns__publish" type="submit">PUBLISH</button>
           {/* redirect home if the user cancels */}
           <button className="btns__cancel" onClick={() => Navigate("/")}>CANCEL</button> 
         </div>

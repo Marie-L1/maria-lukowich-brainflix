@@ -14,7 +14,7 @@ function UploadPage(){
 
    const handleFormSubmit = async (formData) => {
     try{
-        const response = await axios.post(`${API_URL}/videos/`, {
+        const response = await axios.post(`${API_URL}/upload`, {
             title: formData.title,
             description: formData.description,
     });
