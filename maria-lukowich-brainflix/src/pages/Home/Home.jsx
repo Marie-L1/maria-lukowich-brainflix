@@ -8,7 +8,7 @@ import AddComments from '../../components/AddComments/AddComments.jsx';
 import CommentsList from '../../components/CommentsList/CommentsList.jsx';
 import NextVideos from '../../components/NextVideos/NextVideos.jsx';
 
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Home() {
   const { id } = useParams(); // GET the video id from the URL
@@ -59,6 +59,20 @@ function Home() {
     navigate(`/videos/${videoId}`);
   };
 
+  // Handle new comments
+  const handleNewComment = async (commentContent) => {
+    try{
+      const response = await axios.post(`${API_URL}/videos/${id}`, {
+        comment: commentContent,
+      })
+
+      // update the current video's comment section with the new comment (on top)
+      setCurrentVideo({...currentVideo, comments: [response.data, ...currentVideo.comments]});
+    }catch(error){
+      console.error("Error posting comment", error)
+    }
+  }
+
   return (
     <div>
       {currentVideo && (
@@ -79,7 +93,7 @@ function Home() {
                   likes: currentVideo.likes
                 }}
               />
-              <AddComments comments={currentVideo.comments} />
+              <AddComments comments={currentVideo.comments} handleNewComment={handleNewComment} />
               <CommentsList comments={currentVideo.comments} />
             </div>
             <div className="home-flex__nextVideo">
