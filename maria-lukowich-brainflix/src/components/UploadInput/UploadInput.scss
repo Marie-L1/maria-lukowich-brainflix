@@ -103,3 +103,97 @@
         
     }
 }
+
+.btns{
+    @include flex-column;
+    @include flex-center-items;
+    padding-top: 1.875rem;
+    margin: 0.875rem 0 0 1.5625rem;
+    position: relative;
+
+        &::before { 
+            content: "";
+            position: absolute;
+            left: 52%;
+            width: 95%;
+            height: .0625rem;
+            background-color: $mercury;
+            transform: translateX(-50%);
+        }
+            &::before {
+                top: 0;
+            };
+
+    &__publish{
+        @include flex-center-content;
+        flex-wrap: wrap;
+        background-color: $primary-blue;
+        color: $white;
+        max-height: 2.5rem;
+        width: 85vw;
+        margin-right: 15px;
+        padding: 2rem;
+        border-radius: .25rem;
+        position: relative;
+        border: none;
+        margin-bottom: 1.25rem;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("../../assets/Icons/publish.svg") no-repeat center;
+            background-size: 1.875rem;
+            left: .625rem;
+            top: 25%;
+            height: 2rem;
+            width: 2rem;
+        }
+        &:hover{
+            background-color: $secondary-darkBlue;
+        }
+    }
+    &__cancel{
+        @include flex-center-content;
+        flex-wrap: wrap;
+        background-color: $white;
+        color: $primary-blue;
+        max-height: 2.5rem;
+        width: 85vw;
+        margin-right: 15px;
+        padding: 2rem;
+        border-radius: .25rem;
+        position: relative;
+        border: none;
+        margin-bottom: 1.25rem;
+    }
+
+    @include tablet{
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        margin: 3.125rem 2.8rem 0 0;
+        
+        &::before { 
+            left: 54%;
+            width: 92%;
+        }
+    
+        &__publish,  &__cancel{
+            width: 23vw;
+        }
+    }
+    @include desktop{
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        margin: 3.125rem 6rem 31.25rem 0;
+        
+        &::before { 
+            left: 53%;
+            width: 93%;
+        }
+    
+        &__publish,  &__cancel{
+            width: 18vw;
+        }
+        
+    }
+}
