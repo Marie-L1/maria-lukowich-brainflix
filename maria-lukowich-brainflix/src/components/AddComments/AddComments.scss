@@ -36,7 +36,7 @@
         }
         &:not(:placeholder-shown) {
             @include body;
-            color: $primary-blue;
+            color: $primary-black;
         }
         &:focus {
             border-color: $primary-blue;

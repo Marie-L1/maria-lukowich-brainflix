@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./UploadPage.scss"
 import Hero from "../../components/UploadHero/Hero"
 import UploadInput from "../../components/UploadInput/UploadInput"
@@ -11,6 +11,12 @@ function UploadPage(){
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const navigate = useNavigate(); // Hook for navigation
+
+
+     // Set the document title when the components mount
+     useEffect(() => {
+        document.title = "Upload Video - BrainFlix";
+    }, []);
 
    const handleFormSubmit = async (formData) => {
     try{

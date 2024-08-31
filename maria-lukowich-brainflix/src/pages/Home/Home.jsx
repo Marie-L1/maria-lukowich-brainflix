@@ -17,6 +17,11 @@ function Home() {
   const [videoList, setVideoList] = useState([]);
   const [currentVideo, setCurrentVideo] = useState(null);
 
+  // Set the document title when the components mount
+  useEffect(() => {
+    document.title = "Home - BrainFlix";
+  }, []);
+
   // Fetch the list of videos
   useEffect(() => {
     const fetchVideos = async () => {
@@ -84,14 +89,15 @@ function Home() {
           <div className="home-flex">
             <div className="home-flex__detailsComments">
               <VideoDescription 
-                videoDetails={{
-                  description: currentVideo.description,
-                  title: currentVideo.title,
-                  channel: currentVideo.channel,
-                  timestamp: currentVideo.timestamp,
-                  views: currentVideo.views,
-                  likes: currentVideo.likes
-                }}
+                videoDetails={currentVideo}
+                //   {
+                //   description: currentVideo.description,
+                //   title: currentVideo.title,
+                //   channel: currentVideo.channel,
+                //   timestamp: currentVideo.timestamp,
+                //   views: currentVideo.views,
+                //   likes: currentVideo.likes
+                // }
               />
               <AddComments comments={currentVideo.comments} handleNewComment={handleNewComment} />
               <CommentsList comments={currentVideo.comments} />
