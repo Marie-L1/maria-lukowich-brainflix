@@ -1,9 +1,6 @@
 import "./CommentsList.scss";
 import avatar from "../../assets/Images/grey-background.png";
-import axios from "axios";
-import { useParams } from "react-router-dom";
 import React from "react";
-import { useEffect, useState } from "react";
 
 const formatTimestamp = (timestamp) => {
     const date = new Date(timestamp);

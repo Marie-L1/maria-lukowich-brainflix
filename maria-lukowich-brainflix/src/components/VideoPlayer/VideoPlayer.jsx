@@ -1,6 +1,4 @@
 import "./VideoPlayer.scss";
-// import views_img from '../../assets/Icons/views.svg';
-// import likes_img from '../../assets/Icons/likes.svg';
 
 function VideoPlayer({ video, poster }){
     return (

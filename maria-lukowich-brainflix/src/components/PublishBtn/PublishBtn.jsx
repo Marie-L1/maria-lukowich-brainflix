@@ -1,9 +1,18 @@
 import React from 'react'
 import "./PublishBtn.scss";
 
-function PublishBtn() {
-  const handlePublishClick = () =>{
-    alert("Your video has successfully been submitted")
+function PublishBtn({ handleFormSubmit, title, description}) {
+  const handlePublishClick = async () =>{
+    if (title && description){
+      try{
+        await handleFormSubmit({title, description});
+        alert("Your video has successfully been submitted")
+      }catch(error){
+        console.error("Error publishing video", error)
+      }
+    }
+
+    
   }
   return (
     <section className="btns">

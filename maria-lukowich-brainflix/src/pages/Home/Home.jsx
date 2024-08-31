@@ -8,8 +8,7 @@ import AddComments from '../../components/AddComments/AddComments.jsx';
 import CommentsList from '../../components/CommentsList/CommentsList.jsx';
 import NextVideos from '../../components/NextVideos/NextVideos.jsx';
 
-const apiKey = "386a3636-1369-4ba2-a0a8-17b796d2aa27";
-const baseURL = "https://unit-3-project-api-0a5620414506.herokuapp.com";
+const API_URL = import.meta.env.VITE_API_URL;
 
 function Home() {
   const { id } = useParams(); // GET the video id from the URL
@@ -22,7 +21,7 @@ function Home() {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await axios.get(`${baseURL}/videos/?api_key=${apiKey}`);
+        const response = await axios.get(`${API_URL}/videos/`);
         setVideoList(response.data);
 
         // If there's no id in the URL and videoList has data, set the first video as current
@@ -43,7 +42,7 @@ function Home() {
     const fetchCurrentVideo = async () => {
       if (id) {
         try {
-          const response = await axios.get(`${baseURL}/videos/${id}?api_key=${apiKey}`);
+          const response = await axios.get(`${API_URL}/videos/${id}`);
           setCurrentVideo(response.data);
         } catch (error) {
           console.error("Error fetching current video", error);
@@ -59,6 +58,20 @@ function Home() {
   const handleVideoSelection = (videoId) => {
     navigate(`/videos/${videoId}`);
   };
+
+  // Handle new comments
+  const handleNewComment = async (commentContent) => {
+    try{
+      const response = await axios.post(`${API_URL}/videos/${id}`, {
+        comment: commentContent,
+      })
+
+      // update the current video's comment section with the new comment (on top)
+      setCurrentVideo({...currentVideo, comments: [response.data, ...currentVideo.comments]});
+    }catch(error){
+      console.error("Error posting comment", error)
+    }
+  }
 
   return (
     <div>
@@ -80,7 +93,7 @@ function Home() {
                   likes: currentVideo.likes
                 }}
               />
-              <AddComments comments={currentVideo.comments} />
+              <AddComments comments={currentVideo.comments} handleNewComment={handleNewComment} />
               <CommentsList comments={currentVideo.comments} />
             </div>
             <div className="home-flex__nextVideo">
