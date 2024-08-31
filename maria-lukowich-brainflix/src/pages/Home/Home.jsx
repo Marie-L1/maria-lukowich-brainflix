@@ -17,6 +17,11 @@ function Home() {
   const [videoList, setVideoList] = useState([]);
   const [currentVideo, setCurrentVideo] = useState(null);
 
+  // Set the document title when the components mount
+  useEffect(() => {
+    document.title = "Home - BrainFlix";
+  }, []);
+
   // Fetch the list of videos
   useEffect(() => {
     const fetchVideos = async () => {
