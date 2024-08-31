@@ -185,11 +185,13 @@
     @include desktop{
         flex-direction: row-reverse;
         justify-content: flex-start;
-        margin: 3.125rem 6rem 31.25rem 0;
+        margin: 17.5rem -14rem -11rem 0;
+        position: fixed;
+        
         
         &::before { 
-            left: 53%;
-            width: 93%;
+            left: 30%;
+            width: 130%;
         }
     
         &__publish,  &__cancel{
