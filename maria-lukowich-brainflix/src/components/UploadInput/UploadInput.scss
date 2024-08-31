@@ -19,6 +19,7 @@
     &__video-title{
         background-color: $alabaster;
         border: solid .125rem $mercury;
+        color: $primary-black;
         width: 80vw;
         margin-right: 20px;
         max-height: 2.1875rem;
@@ -62,7 +63,7 @@
         }
         &:not(:placeholder-shown) {
             @include body;
-            color: $primary-blue;
+            color: $primary-black;
         }
         &:focus {
             border-color: $primary-blue;
