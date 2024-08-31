@@ -89,14 +89,15 @@ function Home() {
           <div className="home-flex">
             <div className="home-flex__detailsComments">
               <VideoDescription 
-                videoDetails={{
-                  description: currentVideo.description,
-                  title: currentVideo.title,
-                  channel: currentVideo.channel,
-                  timestamp: currentVideo.timestamp,
-                  views: currentVideo.views,
-                  likes: currentVideo.likes
-                }}
+                videoDetails={currentVideo}
+                //   {
+                //   description: currentVideo.description,
+                //   title: currentVideo.title,
+                //   channel: currentVideo.channel,
+                //   timestamp: currentVideo.timestamp,
+                //   views: currentVideo.views,
+                //   likes: currentVideo.likes
+                // }
               />
               <AddComments comments={currentVideo.comments} handleNewComment={handleNewComment} />
               <CommentsList comments={currentVideo.comments} />
